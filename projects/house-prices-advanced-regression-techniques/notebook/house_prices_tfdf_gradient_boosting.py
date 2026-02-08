@@ -1,5 +1,4 @@
-# (paste the full script here)
-cat > projects/house-prices-advanced-regression-techniques/notebook/house_prices_tfdf_gradient_boosting.py <<'EOF'
+# 
 cat > projects/house-prices-advanced-regression-techniques/notebook/house_prices_tfdf_gradient_boosting.py <<'EOF'
 """
 House Prices - Advanced Regression Techniques
