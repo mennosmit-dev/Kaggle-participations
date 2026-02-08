@@ -1,20 +1,6 @@
 # 
-cat > projects/house-prices-advanced-regression-techniques/notebook/house_prices_tfdf_gradient_boosting.py <<'EOF'
 """
-House Prices - Advanced Regression Techniques
-TensorFlow Decision Forests (Gradient Boosted Trees) baseline.
-
-This script mirrors the steps from the notebook:
-- Load and inspect data
-- Basic EDA plots
-- Train/validation split
-- Convert to TF-DF datasets
-- Train Gradient Boosted Trees model
-- Evaluate (including training logs / OOB-like curves)
-- Variable importance inspection + plot
-- Predict on test set and write submission.csv
-
-Designed for Kaggle environment paths.
+Gradient Boosted Trees to predict housing prices
 """
 
 from __future__ import annotations
