@@ -5,8 +5,6 @@ Examined two strategies to predict the price of a house based on approx 150 feat
 - LASSO regression, which required more preprocessing (like one-hot encoding), but is nice as it selects features, which could be combined with other methods as second step with only those features.
 - Other intersting ideas? Perhaps PCA/kPCA first to extract majority information similar as applied in macro-economic modelling?
 
-## The competition
-Link: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
 ## Result
 Best public score: **0.13899**
@@ -31,6 +29,5 @@ TensorFlow Decision Forests:
 - Regression task
 - Minimal preprocessing required
 
-## Repo
-
-https://github.com/mennosmit-dev/Kaggle-participations/tree/main/projects/house-prices-advanced-regression-techniques
+## The competition
+Link: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
