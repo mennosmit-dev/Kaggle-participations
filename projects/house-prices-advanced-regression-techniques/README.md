@@ -6,10 +6,6 @@ https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 ## Result
 Best public score: **0.13899**
 
-NOTE:
-The notebook text says Random Forest, but I actually trained a
-**Gradient Boosted Trees model** using TensorFlow Decision Forests.
-
 ## What I did
 
 - Loaded train.csv and dropped Id column
