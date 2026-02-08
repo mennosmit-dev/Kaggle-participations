@@ -1,5 +1,9 @@
 # House Prices - Advanced Regression Techniques
 
+Examined two strategies to predict the price of a house based on approx 150 features.
+(1) Gradient Boosting via TensorFlowDecisionForest library which is very practical since automatically deals with the categorical and missing data.
+(2) LASSO regression, which required more preprocessing (like one-hot encoding), but is nice as it selects features, which could be combined with other methods as second step with only those features.
+
 Kaggle competition:
 https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
