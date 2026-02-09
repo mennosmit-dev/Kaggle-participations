@@ -1,5 +1,5 @@
 """
-Gradient Boosted Trees to predict housing prices
+Gradient Boosted Trees to predict housing prices - this code was inspired by the idea from (Gusthema, Kin) who used Random Forests instead which (RMSE = 0.14665; and mine 0.13899 ;))
 """
 
 from __future__ import annotations
