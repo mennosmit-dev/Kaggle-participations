@@ -1,6 +1,6 @@
 # Kaggle Participations 🏁
 
-A collection of my Kaggle competition projects: notebooks, experiments, and write-ups.
+A collection of my Kaggle competition projects: programs, experiments, and write-ups.
 
 ## Projects
 
