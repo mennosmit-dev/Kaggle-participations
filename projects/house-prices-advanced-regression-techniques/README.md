@@ -10,23 +10,20 @@ Examined two strategies to predict the price of a house based on approx 150 feat
 - Gradient Boosting: **0.13899**
 - Lasso regression: ...
 
-## What I did
-
-- Loaded train.csv and dropped Id column
-- Basic EDA and SalePrice distribution
-- Random train/validation split
+## Steps I undertook for Gradient Boosting
+- Extracted, loaded and transformed data (very minimal transformation)
+- Basic EDA and SalePrice (dep) distribution
+- Train/validation split
 - Converted pandas dataframe to TF datasets
 - Trained tfdf.keras.GradientBoostedTreesModel
 - Evaluated with validation dataset
 - Checked feature importance
 - Generated submission.csv
 
-## Model
+## What I did for LASSO
 
-TensorFlow Decision Forests:
-- GradientBoostedTreesModel
-- Regression task
-- Minimal preprocessing required
+
+
 
 ## The competition
 Link: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
