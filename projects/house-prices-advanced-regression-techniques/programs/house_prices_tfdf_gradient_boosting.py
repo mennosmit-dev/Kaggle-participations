@@ -1,4 +1,3 @@
-# 
 """
 Gradient Boosted Trees to predict housing prices
 """
