@@ -7,8 +7,7 @@ Examined two strategies to predict the price of a house based on approx 150 feat
 
 
 ## Result
-- Best public score: **0.13899**
-- Gradient Boosting: ..
+- Gradient Boosting: **0.13899**
 - Lasso regression: ...
 
 ## What I did
