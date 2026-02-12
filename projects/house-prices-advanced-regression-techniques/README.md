@@ -6,10 +6,13 @@ Examined two strategies to predict the price of a house based on approx 150 feat
 - Other intersting ideas? Perhaps PCA/kPCA first to extract majority information similar as applied in macro-economic modelling?
 
 
-## Result
-- Gradient Boosting: **0.13899**
-- Lasso regression: ...
+## Result (RMSE)
+- Gradient Boosting: **0.14**
+- Pure LASSO regression: **0.13**
+- LASSO + Neural Network (2-step-approach): **0.86**
+- LASSO-Neural Network (Single-flow apprach): **0.22**
 
+-  
 ## Steps I undertook for Gradient Boosting
 - Extracted, loaded and transformed data (very minimal transformation)
 - Basic EDA and SalePrice (dep) distribution
@@ -21,7 +24,15 @@ Examined two strategies to predict the price of a house based on approx 150 feat
 - Generated submission.csv
 
 ## What I did for LASSO
+- preproces.....
+-Run LASSO for variety of hyperparams, choose best model, apply on test data
 
+## What I did for LASSO + Neural Network (2-step-approach):
+- Run static LASSO model from above
+- With the non-zero features, use a neural network with 2 hidden layers, try several hyperparams
+
+## What I did for LASSO-Neural Network (Single-flow apprach):
+- In a single pipeline first use lasso and then neural network (one flow combination)
 
 
 
