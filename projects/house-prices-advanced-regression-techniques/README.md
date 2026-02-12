@@ -9,10 +9,10 @@ Examined two strategies to predict the price of a house based on approx 150 feat
 
 
 ## Result (RMSE)
-- Gradient Boosting: **0.14**
-- Pure LASSO regression: **0.13**
-- LASSO + Neural Network (2-step-approach): **0.86**
-- LASSO-Neural Network (Single-flow apprach): **0.22**
+- Gradient Boosting: **0.138**
+- Pure LASSO regression: **0.134**
+- LASSO + Neural Network (2-step-approach): **0.858**
+- LASSO-Neural Network (Single-flow apprach): **0.128**
 
 -  
 ## Steps I undertook for Gradient Boosting
