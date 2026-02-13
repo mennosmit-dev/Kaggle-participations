@@ -8,7 +8,8 @@ I really enjoy working on these and also learning optimal solution-methods from 
 | # | Competition | Approach | Best public score | Links |
 |---|------------|----------|------------------|------|
 | 1 | House Prices - Advanced Regression Techniques | (1) Gradient Boosted Trees (2) LASSO 2-step | 0.128 (so far) | [Project](./projects/house-prices-advanced-regression-techniques) · [Kaggle](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) |
-| 2 | |  |  | 
+| 2 | AI Cup 2026 | Performance Track |  |  | 
+| 3 | |  |  | 
 
 ## Repo layout
 
