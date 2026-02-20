@@ -1,3 +1,6 @@
+# IN PROGRESS (UNDER CONSTRUCTION)
+
+
 # House Prices - Advanced Regression Techniques
 
 Examined two strategies to predict the price of a house based on approx 150 features:
