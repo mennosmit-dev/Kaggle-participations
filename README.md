@@ -7,9 +7,9 @@ I really enjoy working on these and also learning optimal solution-methods from 
 
 | # | Competition | Approach | Best public score | Links |
 |---|------------|----------|------------------|------|
-| 1 | House Prices - Advanced Regression Techniques | (1) Gradient Boosted Trees (2) LASSO 2-step | Top 30.0% | [Project](./house-prices-advanced-regression-techniques) · [Kaggle](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) |
-| 2 | AI Cup 2026 | (1) LGBM and Catboost ensamble (2) LGBM, Catboost, XGBM, GRU and LSTM ensamble | Top 9.5% | [Project](./AI-Cup-2026) · [Kaggle](https://www.kaggle.com/competitions/ai-cup-2026-performance) |
-| 3 | |  |  | 
+| 1 | Advanced Regression Techniques (housing prices) | (1) Gradient Boosted Trees (2) LASSO 2-step | Top 30.0% | [Project](./house-prices-advanced-regression-techniques) · [Kaggle](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) |
+| 2 | AI Cup 2026 (birds) | (1) LGBM and Catboost ensamble (2) LGBM, Catboost, XGBM, GRU and LSTM ensamble | Top 9.5% | [Project](./AI-Cup-2026) · [Kaggle](https://www.kaggle.com/competitions/ai-cup-2026-performance) |
+| 3 | Triageist (medical) |  | competition in progress | 
 
 ## Repo layout
 
