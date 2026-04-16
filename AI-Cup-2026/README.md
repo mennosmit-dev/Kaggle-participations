@@ -11,8 +11,7 @@ We approached the competition in **two parts**:
 
 ## Result
 
-- **Public leaderboard:** **Top 9.5%**
-- You can present this as **9 / 95 teams** if that is how you want to report it in your main repo table.
+- **Public leaderboard:** **Top 9.5% (9 / 95 teams)**
 
 ## Competition overview
 
