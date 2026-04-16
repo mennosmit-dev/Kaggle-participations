@@ -106,18 +106,6 @@ A major focus of RadarBird is that predictions should not automatically trigger 
 - human-in-the-loop validation
 - conservative fallback behavior
 
-## Project structure
-
-```text
-ai-cup-2026-birds/
-├── README.md
-├── requirements.txt
-├── docs/
-│   └── RadarBird.pdf
-└── src/
-    ├── performance_tabular_ensemble.py
-    ├── performance_hardneg_baseline.py
-    └── performance_xgb_sequence_blend.py
 ```
 
 ## Notes
