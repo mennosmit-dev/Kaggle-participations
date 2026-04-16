@@ -27,7 +27,7 @@ The implementation side asked teams to design an AI system that could actually b
 
 ## 1) Tabular ensemble baseline
 
-File: `src/performance_tabular_ensemble.py`
+File: `programs/performance_tabular_ensemble.py`
 
 This script is the clean export of the first notebook. It builds a **tabular ensemble** around boosted trees and contextual feature engineering.
 
@@ -47,7 +47,7 @@ Tabular boosting models are usually a strong starting point for structured compe
 
 ## 2) Hard-negative baseline + sequence blend
 
-File: `src/performance_xgb_sequence_blend.py`
+File: `programs/performance_xgb_sequence_blend.py`
 
 This part contains the more advanced iteration from the second notebook.
 
