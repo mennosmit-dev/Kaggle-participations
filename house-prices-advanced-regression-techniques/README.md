@@ -1,81 +1,119 @@
 # House Prices – Advanced Regression Techniques
 
-This repository contains a cleaned-up version of my work for the Kaggle competition **House Prices: Advanced Regression Techniques**.
+This project explores multiple machine learning approaches to predict house prices using the Kaggle dataset:
 
-The goal is to predict house sale prices from roughly 150 mixed-type features. I experimented with several regression pipelines, starting with a strong linear baseline and then extending it with neural-network models.
+👉 https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
-## Competition
-Kaggle competition: House Prices – Advanced Regression Techniques
+The dataset contains ~150 features, including numerical and categorical variables with missing values. Different modeling strategies were tested, ranging from tree-based methods to linear models and neural networks.
 
-## Experiments
+---
 
-### Version 2 — LASSO regression
-A regularized linear baseline with:
-- median imputation for numeric features
-- constant-value imputation for categorical features
-- one-hot encoding
-- feature scaling for numeric columns
-- cross-validated `alpha` tuning
+## 📊 Results (RMSE)
 
-This is a strong and interpretable baseline because LASSO performs embedded feature selection.
+| Model                                      | RMSE  |
+|-------------------------------------------|------:|
+| Gradient Boosting (TF-DF)                 | 0.138 |
+| LASSO Regression                         | 0.134 |
+| LASSO + Neural Network (2-step)           | 0.858 |
+| LASSO + Neural Network (Single pipeline)  | 0.128 |
 
-### Version 3 — Two-step LASSO + Neural Network
-A staged approach:
-1. fit a LASSO-based feature selector on the training data
-2. keep only the selected transformed features
-3. train an `MLPRegressor` on that reduced feature space
+---
 
-This version makes the feature-selection stage explicit and separate from the neural network.
+## 🚀 Approaches
 
-### Version 4 — Single-flow LASSO + Neural Network pipeline
-An end-to-end scikit-learn pipeline that combines:
-- preprocessing
-- LASSO-based feature selection via `SelectFromModel`
-- neural-network regression
+### 1. Gradient Boosting (TensorFlow Decision Forests)
 
-This is cleaner to tune because the whole workflow can be optimized in one search object.
+File: `src/version1_tfdf_gradient_boosting.py`
 
-## Reported notebook results
-These are the scores reported in the original notebook draft:
+This approach uses **TensorFlow Decision Forests (TF-DF)** to train a Gradient Boosted Trees model.
 
-- Gradient Boosting: **0.138**
-- Pure LASSO regression: **0.134**
-- LASSO + Neural Network (two-step): **0.858**
-- LASSO + Neural Network (single-flow): **0.128**
+**Why this approach:**
+- Handles categorical variables automatically
+- No need for extensive preprocessing
+- Robust to missing values
+- Strong baseline with minimal effort
 
-## Project structure
+**Steps:**
+- Load and inspect dataset
+- Minimal preprocessing (drop `Id`)
+- Basic EDA (target distribution + numeric features)
+- Train/validation split (random mask)
+- Convert pandas → TF dataset
+- Train `GradientBoostedTreesModel`
+- Evaluate on validation set
+- Analyze feature importance
+- Generate Kaggle submission
 
-```text
-house_prices_repo/
-├── README.md
-├── requirements.txt
-└── src/
-    ├── common.py
-    ├── version2_lasso.py
-    ├── version3_lasso_mlp_two_step.py
-    └── version4_lasso_mlp_pipeline.py
-```
+Code reference: :contentReference[oaicite:0]{index=0}
 
-## Usage
+---
 
-Place `train.csv` and `test.csv` from the Kaggle competition in a local data directory, then run one of the scripts below.
+### 2. LASSO Regression
 
-### Version 2
-```bash
-python src/version2_lasso.py --train data/train.csv --test data/test.csv --output submissions/submission_lasso.csv
-```
+File: `src/version2_lasso.py`
 
-### Version 3
-```bash
-python src/version3_lasso_mlp_two_step.py --train data/train.csv --test data/test.csv --output submissions/submission_lasso_mlp_two_step.csv
-```
+A linear model with L1 regularization used for **feature selection and prediction**.
 
-### Version 4
-```bash
-python src/version4_lasso_mlp_pipeline.py --train data/train.csv --test data/test.csv --output submissions/submission_lasso_mlp_pipeline.csv
-```
+**Key steps:**
+- Data preprocessing:
+  - Handle missing values
+  - One-hot encode categorical variables
+- Feature scaling
+- Hyperparameter tuning (`alpha`)
+- Model training and validation
+- Prediction on test set
 
-## Notes
-- The scripts train on `log1p(SalePrice)` and convert predictions back with `expm1`.
-- Sparse columns from the notebook are dropped consistently to mirror the original experiments.
-- Some incomplete notebook fragments were turned into clean, runnable code where needed.
+**Why LASSO:**
+- Automatically selects relevant features
+- Reduces overfitting
+- Good interpretability
+
+---
+
+### 3. LASSO + Neural Network (2-Step Approach)
+
+File: `src/version3_lasso_mlp_two_step.py`
+
+A sequential modeling approach:
+
+**Pipeline:**
+1. Train LASSO → select non-zero features  
+2. Train a neural network (MLP) on selected features  
+
+**Neural network:**
+- 2 hidden layers
+- Tuned hyperparameters (neurons, learning rate, etc.)
+
+**Observation:**
+- Did not perform well in this setup (likely due to feature compression + NN mismatch)
+
+---
+
+### 4. LASSO + Neural Network (Single Pipeline)
+
+File: `src/version4_lasso_mlp_pipeline.py`
+
+A unified pipeline combining:
+- Feature selection (LASSO-like behavior)
+- Neural network training in a single flow
+
+**Why this works better:**
+- End-to-end optimization
+- Avoids information loss from strict feature filtering
+- Better synergy between linear and non-linear modeling
+
+
+---
+
+## 🧠 Future Ideas
+
+Some potential improvements and experiments:
+
+- PCA / Kernel PCA for dimensionality reduction
+- Ensemble methods (blend TF-DF + LASSO + NN)
+- Stacking models
+- Feature engineering (domain-driven)
+- LightGBM / XGBoost comparison
+- Cross-validation instead of single split
+
+---
