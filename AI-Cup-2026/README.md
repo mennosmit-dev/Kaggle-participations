@@ -62,7 +62,7 @@ In short, this version moves from “strong tabular baseline” toward a **hybri
 ## RadarBird – Implementation Track
 
 File:
-- `docs/RadarBird.pdf`
+- `RadarBird.pdf`
 
 **RadarBird** is our implementation-track proposal: a radar-based bird species classification and operational decision-support system for wind farms.
 
