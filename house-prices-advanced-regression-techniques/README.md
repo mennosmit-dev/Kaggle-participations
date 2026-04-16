@@ -23,7 +23,7 @@ The dataset contains ~150 features, including numerical and categorical variable
 
 ### 1. Gradient Boosting (TensorFlow Decision Forests)
 
-File: `src/version1_tfdf_gradient_boosting.py`
+File: `programs/tfdf_gradient_boosting.py`
 
 This approach uses **TensorFlow Decision Forests (TF-DF)** to train a Gradient Boosted Trees model.
 
