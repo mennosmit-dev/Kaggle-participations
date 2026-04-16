@@ -47,18 +47,9 @@ Tabular boosting models are usually a strong starting point for structured compe
 
 ## 2) Hard-negative baseline + sequence blend
 
-Files:
-- `src/performance_hardneg_baseline.py`
-- `src/performance_xgb_sequence_blend.py`
+File: `src/performance_xgb_sequence_blend.py`
 
 This part contains the more advanced iteration from the second notebook.
-
-### Hard-negative baseline
-The baseline script adds stronger evaluation and ensembling choices, including:
-- blocked time-based folds
-- AP-oriented blending
-- hard-negative handling
-- contextual priors and environmental covariates
 
 ### Extended blend
 The wrapper script builds on the baseline and adds:
