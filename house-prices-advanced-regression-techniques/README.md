@@ -50,7 +50,7 @@ Code reference: :contentReference[oaicite:0]{index=0}
 
 ### 2. LASSO Regression
 
-File: `src/version2_lasso.py`
+File: `programs/version2_lasso.py`
 
 A linear model with L1 regularization used for **feature selection and prediction**.
 
@@ -72,7 +72,7 @@ A linear model with L1 regularization used for **feature selection and predictio
 
 ### 3. LASSO + Neural Network (2-Step Approach)
 
-File: `src/version3_lasso_mlp_two_step.py`
+File: `programs/version3_lasso_mlp_two_step.py`
 
 A sequential modeling approach:
 
@@ -91,7 +91,7 @@ A sequential modeling approach:
 
 ### 4. LASSO + Neural Network (Single Pipeline)
 
-File: `src/version4_lasso_mlp_pipeline.py`
+File: `programs/version4_lasso_mlp_pipeline.py`
 
 A unified pipeline combining:
 - Feature selection (LASSO-like behavior)
