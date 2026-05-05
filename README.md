@@ -10,6 +10,7 @@ I really enjoy working on these and also learning optimal solution methods from 
 | 1 | Advanced Regression Techniques (housing prices) | (1) TF-DF Gradient Boosted Trees (2) LASSO + Neural Network pipeline | Top 30.0% | [Project](./house-prices-advanced-regression-techniques) · [Kaggle](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) |
 | 2 | AI Cup 2026 (birds) | (1) Tabular ensemble (LightGBM, CatBoost) (2) Hybrid ensemble (LightGBM, CatBoost, XGBoost + GRU/LSTM) | Top 9.5% | [Project](./AI-Cup-2026) · [Kaggle](https://www.kaggle.com/competitions/ai-cup-2026-performance) |
 | 3 | Triagegeist (medical) |  | competition in progress | 
+| 4 | Pierce the VEIL: Hack It and Crack It Simulation |  | competition in progress | 
 
 ## Repo layout
 
